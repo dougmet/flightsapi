@@ -1,12 +1,4 @@
 
-# Taken from trestletech/plumber
-
-#* @get /today
-todayDate <- function(){
-  lubridate::today()
-}
-
-
 #* @get /now
 nowTime <- function(){
   lubridate::now()
