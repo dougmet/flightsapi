@@ -12,5 +12,9 @@ flights_model <- readRDS(system.file("model.rds", package = "flightsapi"))
 #* @post /flightdelay
 flightdelay <- function(flight) {
   flights_test <- as.data.frame(flight)
-  predict_flight_delay(flights_test, model = flights_model)
+  pred = predict_flight_delay(flights_test, model = flights_model)
+  
+  response = list(api_version = 0.1, prediction = pred)
+  
+  response
 }

@@ -12,8 +12,7 @@
 #' ids <- sample(1:nrow(flights), size = 10000)
 #' flights_train <- flights[ids,]
 #' model <- train_flight_delay(flights_train)
-#' ids <- sample(1:nrow(flights), size = 100)
-#' flights_test <- flights[ids,]
+#' flights_test <- flights[7,]
 #' results <- predict_flight_delay(flights_test, model)
 predict_flight_delay <- function(flights_test, model) {
   
@@ -22,4 +21,5 @@ predict_flight_delay <- function(flights_test, model) {
   
   stats::predict(model, newdata = data_test, type = 'prob')
   
+  #data_test
 }

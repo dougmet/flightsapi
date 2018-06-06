@@ -24,7 +24,7 @@ prep_features <- function(flights_data) {
       )
     ) %>%
     mutate(carrier = factor(carrier),
-           origin = factor(origin))
+           origin = factor(origin, levels = c("EWR", "JFK", "LGA")))
   
 }
 

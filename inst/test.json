@@ -1,0 +1,12 @@
+{"flight": [
+    {
+        "year": 2013,
+        "month": 3,
+        "day": 15,
+        "sched_dep_time": 918,
+        "carrier": "B6",
+        "origin": "JFK",
+        "distance": 187
+    }
+]
+}
