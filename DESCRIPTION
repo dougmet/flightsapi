@@ -1,9 +1,9 @@
-Package: holidaycalc
+Package: flightsapi
 Type: Package
 Title: When is Your Longest Holiday
 Version: 0.1.0
 Authors@R: c(person("Doug", "Ashton", email = "dashton@mango-solutions.com", role = c("aut", "cre")))
-Description: Given a date range find the longest holiday you could take.
+Description: Predict flight delay for NYC airports.
 License: MIT + file LICENSE
 Encoding: UTF-8
 LazyData: true
