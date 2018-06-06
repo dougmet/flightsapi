@@ -3,7 +3,7 @@
 #'
 #' @param flights_test Data frame with test data
 #'
-#' @return Prediction
+#' @return Prediction data frame with late probabilities
 #' @export
 #' @examples
 #' library(nycflights13)
@@ -19,7 +19,8 @@ predict_flight_delay <- function(flights_test, model) {
   data_test <- flights_test %>%
     prep_features()
   
-  stats::predict(model, newdata = data_test, type = 'prob')
+  pred <- stats::predict(model, newdata = data_test, type = 'prob')
   
-  #data_test
+  data.frame(pred)
+  
 }
