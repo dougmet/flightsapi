@@ -1,21 +1,16 @@
+library(flightsapi)
 
 #* @get /now
 nowTime <- function(){
   lubridate::now()
 }
 
+flights_model <- readRDS(system.file("model.rds", package = "flightsapi"))
+
 # Call the longestRun function
 #
-#* @get /longrun
-#* @post /longrun
-longrun <- function(start = Sys.Date(), end = Sys.Date() + 370, daysleave = 10) {
-  daysleave <- as.integer(daysleave)
-  flightsapi::longestRun(startDate = start, endDate = end, daysLeave = daysleave)
-}
-
-#* @get /minleave
-#* @post /minleave
-minleave <- function(start = Sys.Date(), end = Sys.Date() + 370, window = 21) {
-  window <- as.integer(window)
-  flightsapi::minDaysLeave(startDate = start, endDate = end, window = window)
+#* @post /flightdelay
+flightdelay <- function(flight) {
+  flights_test <- as.data.frame(flight)
+  predict_flight_delay(flights_test, model = flights_model)
 }
