@@ -1,6 +1,6 @@
 
 <!-- README.md is generated from README.Rmd. Please edit that file -->
-Holiday Calculator
+Flight Delays Calculator
 ==================
 
 [![Build Status](https://travis-ci.org/dougmet/flightsapi.svg?branch=master)](https://travis-ci.org/dougmet/flightsapi) [![Docker Automated build](https://img.shields.io/docker/automated/dougmet/flightsapi.svg)]() [![](http://www.r-pkg.org/badges/version/flightsapi)](http://www.r-pkg.org/pkg/flightsapi)
