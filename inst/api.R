@@ -1,11 +1,15 @@
 library(flightsapi)
+library(randomForest)
 
 #' @get /now
 nowTime <- function(){
   lubridate::now()
 }
 
-flights_model <- readRDS(system.file("model.rds", package = "flightsapi"))
+# This could point to an external location
+Sys.setenv(MODEL_LOCATION=system.file("model.rds", package = "flightsapi"))
+
+flights_model <- readRDS(Sys.getenv("MODEL_LOCATION"))
 
 # Call the longestRun function
 #
